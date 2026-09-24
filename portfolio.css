@@ -122,7 +122,18 @@ nav a:hover {
 }
 
 .botao-secundario {
-    background-color: #7c5cff;
+    background-color: transparent;
     border: 1px solid #7c5cff;
     color: #7c5cff;
+}
+
+.botao-secundario:hover {
+    background-color: #7c5cff;
+    color: #ffffff;
+}
+
+/* ------ SEÇÕES ------ */
+
+section {
+    
 }
