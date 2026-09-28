@@ -1,0 +1,8 @@
+<?php  (código)   ?>
+inicio           fim
+
+
+---- declarar variável
+
+caso char ->    $(nome da variavel) = "";
+caso numero - > $(nome da variavel) = 18;
