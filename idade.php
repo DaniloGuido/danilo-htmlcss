@@ -25,6 +25,7 @@
         <a href="index.php">Início</a>
     </nav>
     </div>
+    
     <h1>Verficicação de idade</h1>
     
     <form method="POST">
