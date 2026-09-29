@@ -27,6 +27,6 @@
 
         <button type="submit">Enviar</button>
     </form>
-    
+    <h2> <?= $resultado ?> </h2>
 </body>
 </html>
