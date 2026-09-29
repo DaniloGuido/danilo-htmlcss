@@ -24,11 +24,6 @@ nav {
     gap: 30px;
 }
 
-.logo {
-    height: 40px;
-    background-color: #999999;
-}
-
 .mensagem {
     align-items: center;
     height: auto;
