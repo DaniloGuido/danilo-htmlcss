@@ -20,13 +20,12 @@
 </head>
 <body>
     <!--MENU-->
-    <div class="retornar">
+    <div class="logo">
+        <h2>Verificação de idade</h2>
     <nav>
         <a href="index.php">Início</a>
     </nav>
     </div>
-    
-    <h1>Verficicação de idade</h1>
     
     <form method="POST">
         <label>Nome:</label>
