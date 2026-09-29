@@ -26,8 +26,8 @@
 
     <header>
         <div class="logo">
-            <h2> <?= $resultado ?>    </h2>
-            <!--h2>Danilo <span>Guido</span></h2-->
+        <h2> <?= $resultado ?> </h2>
+            <h2>Danilo <span>Guido</span></h2>
         </div>
         <nav>
             <a href="#inicio">Início</a>
