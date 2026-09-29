@@ -18,6 +18,9 @@
     <title>Document</title>
 </head>
 <body>
+    <nav>
+        <a href="index.php">Início</a>
+    </nav>
     <h1>Verficicação de idade</h1>
     <form method="POST">
         <label>Nome:</label>
