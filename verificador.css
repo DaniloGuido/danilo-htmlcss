@@ -19,6 +19,11 @@ a {
       color: inherit;
 }
 
+nav {
+    display: flex;
+    gap: 30px;
+}
+
 .logo {
     height: 40px;
     background-color: #999999;
