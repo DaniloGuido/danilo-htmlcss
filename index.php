@@ -129,17 +129,17 @@
                         01
                     </div>
 
-                    <h3>Sistema de cadastro</h3>
+                    <h3>Sistema de verificação de idade</h3>
                     <p>
-                        Descrição do sistema de cadastro
+                        Recebe idade e informa se é maior ou menor de idade
                     </p>
 
                     <div class="tecnologias">
+                        <span>PHP</span>
                         <span>HTML</span>
-                        <span>CSS</span>
                         <!--span>PHP</span-->
                     </div>
-                    <a href="cadastro.html">Ver projetos</a>
+                    <a href="idade.php">Ver projetos</a>
                 </div>
 
                 <!-- PROJETO 2-->
