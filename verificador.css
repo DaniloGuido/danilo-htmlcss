@@ -21,14 +21,5 @@ a {
 
 .logo {
     height: 40px;
-    color: #3a3a3a;
-}
-
-.logo h2 {
-    color: #000292
-}
-
-.logo a {
-    color: #858585;
-    height: 50px;
+    background-color: #999999;
 }
