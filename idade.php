@@ -18,7 +18,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>PERUA!</h1>
+    <h1>Verficicação de idade</h1>
     <form method="POST">
         <label>Nome:</label>
         <input type="text" class="nome" id="nome" name="nome">
