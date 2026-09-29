@@ -22,7 +22,6 @@ a {
 .logo {
     height: 40px;
     color: #3a3a3a;
-    align-items: center;
 }
 
 .logo h2 {
@@ -31,5 +30,4 @@ a {
 
 .logo a {
     color: #858585;
-    text-align: center;
 }
