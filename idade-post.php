@@ -31,7 +31,6 @@
     <form method="POST">
         <label>Nome:</label>
         <input type="text" class="nome" id="nome" name="nome">
-@@ -35,6 +36,7 @@
         <input type="numero" class="idade" id="idade" name="idade">
 
         <button type="submit">Enviar</button>
