@@ -380,7 +380,7 @@ section {
     }
 
     .sobre-texto p{
-        align-items: start;
+        align-text: start;
     }
 
     /* ------ PROJETOS ------ */
