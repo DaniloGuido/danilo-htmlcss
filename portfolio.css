@@ -379,6 +379,10 @@ section {
         align-items: stretch;
     }
 
+    .sobre-texto p{
+        align-items: start;
+    }
+
     /* ------ PROJETOS ------ */
 
     .projetos {
