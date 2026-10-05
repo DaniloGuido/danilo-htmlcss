@@ -157,17 +157,17 @@
                         03
                     </div>
 
-                    <h3>Sistema 3</h3>
+                    <h3>Dados . JSON</h3>
                     <p>
-                        Descrição do sistema 3
+                        ...
                     </p>
 
                     <div class="tecnologias">
                         <span>HTML</span>
                         <span>CSS</span>
-                        <!--span>PHP</span-->
+                        <span>PHP</span>
                     </div>
-                    <a href="cadastro.html">Ver projetos</a>
+                    <a href="dados-json.php">Ver projetos</a>
                 </div>
 
             </div>
