@@ -46,34 +46,39 @@ $produtos = json_decode($conteudoJson, true);
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Produtos</title>
 </head>
+
 <body>
+    <nav>
+        <a href="index.php">Início</a>
+    </nav>
     <h1>CADASTRO DE PRODUTOS</h1>
     <form method="POST">
         <label>Nome:</label>
-        <input type="text" name = "nome" required>
+        <input type="text" name="nome" required>
         <br><br>
         <label>Categoria:</label>
-        <input type="text" name = "categoria" required>
+        <input type="text" name="categoria" required>
         <br><br>
         <label>Marca:</label>
-        <input type="text" name = "marca" required>
+        <input type="text" name="marca" required>
         <br><br>
         <label>Preço:</label>
-        <input type="number" name = "preco" required>
+        <input type="number" name="preco" required>
         <br><br>
         <label>Quantidade:</label>
-        <input type="number" name = "quantidade" required>
+        <input type="number" name="quantidade" required>
         <br><br>
         <label>Nome do fabricante:</label>
-        <input type="text" name = "n_fabricante" required>
+        <input type="text" name="n_fabricante" required>
         <br><br>
         <label>País do fabricante:</label>
-        <input type="text" name = "p_fabricante" required>
+        <input type="text" name="p_fabricante" required>
         <br><br>
 
         <button type="submit">Enviar</button>
@@ -82,28 +87,29 @@ $produtos = json_decode($conteudoJson, true);
 
     <h1>PRODUTOS CADASTRADOS</h1>
 
-    <?php foreach ($produtos as $produto) { ?> 
-    
-    <h2> <?= $produto["nome"] ?> </h2>
-    <h3> Preço: <?= $produto["preco"] ?> </h3>
-    <p> Marca: <?= $produto["marca"] ?> </p>
-    <p> Categoria: <?= $produto["categoria"] ?> </p>
-    <p> Quantidade: <?= $produto["quantidade"] ?> </p>
+    <?php foreach ($produtos as $produto) { ?>
 
-    <h4> País do fabricante: <?= $produto["p_info"]["p_fabricante"] ?> </h4>
-    <h4> Nome do fabricante: <?= $produto["p_info"]["n_fabricante"] ?> </h4>
-    
+        <h2> <?= $produto["nome"] ?> </h2>
+        <h3> Preço: <?= $produto["preco"] ?> </h3>
+        <p> Marca: <?= $produto["marca"] ?> </p>
+        <p> Categoria: <?= $produto["categoria"] ?> </p>
+        <p> Quantidade: <?= $produto["quantidade"] ?> </p>
 
-    
+        <h4> País do fabricante: <?= $produto["p_info"]["p_fabricante"] ?> </h4>
+        <h4> Nome do fabricante: <?= $produto["p_info"]["n_fabricante"] ?> </h4>
 
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
     <?php } ?>
 </body>
+
 </html>
