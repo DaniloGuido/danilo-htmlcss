@@ -1,3 +1,24 @@
+header {
+    height: 80px;
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #15151d;
+    border-bottom: 1px solid #292936;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo h2 {
+    font-size: 26px;
+}
+
+.logo span {
+    color: #1a2c91;
+}
+
 nav {
     display: flex;
     gap: 30px;
