@@ -157,7 +157,7 @@
                         03
                     </div>
 
-                    <h3>Dados . JSON</h3>
+                    <h3>Dados . JSON ( professor )</h3>
                     <p>
                         ...
                     </p>
@@ -168,6 +168,27 @@
                         <span>PHP</span>
                     </div>
                     <a href="dados-json(PROFESSOR).php">Ver projetos</a>
+                </div>
+
+                <!-- PROJETO 4 -->
+
+                <div class="card">
+
+                    <div class="numero-projeto">
+                        04
+                    </div>
+
+                    <h3>Dados . JSON</h3>
+                    <p>
+                        Recebe informações e cadastra produto em JSON
+                    </p>
+
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                    </div>
+                    <a href="cadastro-produtos.php">Ver projetos</a>
                 </div>
 
             </div>
