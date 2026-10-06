@@ -1,4 +1,6 @@
-
+body {
+    background: linear-gradient(135deg #979797 #3d3d3d);
+}
 
 header {
     height: 80px;
