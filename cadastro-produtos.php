@@ -8,8 +8,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     // Recebe fabricante e páis do fabricante
-    $nome_fab = $_POST["nome do fabricante"];
-    $pais_fab = $_POST["país do fabricante"];
+    $nome_fab = $_POST["n_fabricante"];
+    $pais_fab = $_POST["p_fabricante"];
 
     $novoProduto = [
         "nome" => $nome,
