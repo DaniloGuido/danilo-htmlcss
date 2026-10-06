@@ -87,7 +87,7 @@ $produtos = json_decode($conteudoJson, true);
     <h2> <?= $produto["nome"] ?> </h2>
     <p> Marca: <?= $produto["marca"] ?> </p>
 
-    
+    <!-- COMPLETAR COM AS INFORMAÇÕES REMANESCENTES -->
 
     
     
