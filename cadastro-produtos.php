@@ -85,9 +85,16 @@ $produtos = json_decode($conteudoJson, true);
     <?php foreach ($produtos as $produto) { ?> 
     
     <h2> <?= $produto["nome"] ?> </h2>
+    <h3> Preço: <?= $produto["preco"] ?> </h3>
     <p> Marca: <?= $produto["marca"] ?> </p>
+    <p> Categoria: <?= $produto["categoria"] ?> </p>
+    <p> Quantidade: <?= $produto["quantidade"] ?> </p>
 
-    <!-- COMPLETAR COM AS INFORMAÇÕES REMANESCENTES -->
+    <h4> País do fabricante: <?= $produto["p_info"]["p_fabricante"] ?> </h4>
+    <h4> Nome do fabricante: <?= $produto["p_info"]["n_fabricante"] ?> </h4>
+    
+
+    
 
     
     
