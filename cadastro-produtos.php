@@ -51,12 +51,12 @@ $produtos = json_decode($conteudoJson, true);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Produtos</title>
-</head>
-
-<body>
     <nav>
         <a href="index.php">Início</a>
     </nav>
+</head>
+
+<body>
     <h1>CADASTRO DE PRODUTOS</h1>
     <form method="POST">
         <label>Nome:</label>
