@@ -1,0 +1,22 @@
+colinhas / consultas ; 
+ - https://www.w3schools.com/css/default.asp
+
+
+
+
+joguinho de digitar ;
+ - typing.com
+ - fastfinger
+
+
+pesquisar ;
+ - React em programação
+ - Laravel
+ - Noção básica em outras linguagens de programação
+
+
+ comandos ssh / vps ;
+  - cd .. (caso esteja dentro de uma pasta)
+  - rm -rf www
+  - git clone (link do repositório) www
+  

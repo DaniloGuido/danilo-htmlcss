@@ -1,0 +1,66 @@
+<?php  (código)   ?>
+inicio           fim
+
+
+---- declarar variável
+
+caso char ->    $(nome da variavel) = "";
+caso numero - > $(nome da variavel) = 18;
+
+
+///////////////////////////////////////////////
+
+
+CRUD
+
+
+------------------------------------------------
+CREATE
+Adiciona uma informação ao arquivo .JSON
+
+EX:
+    João | 18 anos
+
+
+    (Informação ADICIONADA ao arquivo .JSON)
+
+------------------------------------------------
+READ
+Mostra informações contidas em um arquivo .JSON
+
+EX:
+    João  | 18 anos
+    Maria | 20 anos
+
+
+    (Mostrou as informações contidas no 
+    arquivo, Maria já estava dentro do 
+    arquivo antes de adicionar João)
+
+------------------------------------------------
+UPDATE
+Atualiza informações já existentes em arquivo .JSON
+
+EX:
+    João  | 18 anos
+    Maria | 21 anos
+
+    (apenas alterou uma informação que
+    já estava salva no arquivo .JSON) 
+
+------------------------------------------------
+DELETE
+Apaga uma informação dentro do arquivo .JSON
+
+EX:
+    João | 18 anos
+    Null | Null
+
+
+
+
+------------------------------------------------
+PHP ; 
+
+file_put_contents - CREATE
+file_get_contents - READ
