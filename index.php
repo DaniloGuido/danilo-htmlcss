@@ -191,6 +191,27 @@
                     <a href="cadastro-produtos.php">Ver projetos</a>
                 </div>
 
+                <!-- PROJETO 5 -->
+
+                <div class="card">
+
+                    <div class="numero-projeto">
+                        05
+                    </div>
+
+                    <h3>ATIVIDADE (remover depois)</h3>
+                    <p>
+                        ...
+                    </p>
+
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                    </div>
+                    <a href="helpdesk.php">Ver projetos</a>
+                </div>
+
             </div>
 
         </section>

@@ -1,6 +1,6 @@
 <?php
 
-require_once "funcoes.php";
+require_once "funcoes1.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nota1 = $_POST["nota1"];
