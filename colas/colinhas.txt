@@ -15,8 +15,20 @@ pesquisar ;
  - Noção básica em outras linguagens de programação
 
 
- comandos ssh / vps ;
-  - cd .. (caso esteja dentro de uma pasta)
-  - rm -rf www
-  - git clone (link do repositório) www
+comandos ssh / vps ;
+ - cd .. (caso esteja dentro de uma pasta)
+ - rm -rf www
+ - git clone (link do repositório) www
   
+
+dica para navegação em pastas ;
+ - quando por exemplo abrir uma atividade pelo index, se a atividade está
+    em uma pasta e eu quero acessar outro arquivo estando dentro dessa atividade,
+    não precisa colocar a pasta 
+
+ - EXEMPLO : estou no arquivo (index.php) que não está localizado em nenhuma pasta
+             e quero entrar na atividade (idade-get.php) eu devo colocar a pasta (atividade)
+             antes, caso eu queira ir para idade-post após a atividade idade get, eu coloco
+             somente o nome do arquivo que seria: (idade-post.php), porém se eu quero voltar
+             para index com um botão inicio, devo colocar (../index.php), o ../ volta para a 
+             pasta anterior.
