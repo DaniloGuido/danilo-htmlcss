@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danilo Guido / Portfólio</title>
-    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="css/portfolio.css">
 </head>
 
 <body>
@@ -125,7 +125,7 @@
                         <span>HTML</span>
                         <span>CSS</span>
                     </div>
-                    <a href="idade-post.php">Ver projetos</a>
+                    <a href="atividades/idade-post.php">Ver projetos</a>
                 </div>
 
                 <!-- PROJETO 2-->
@@ -146,7 +146,7 @@
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="idade-get.php">Ver projetos</a>
+                    <a href="atividades/idade-get.php">Ver projetos</a>
                 </div>
 
                 <!-- PROJETO 3 -->
@@ -167,7 +167,7 @@
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="dados-json(PROFESSOR).php">Ver projetos</a>
+                    <a href="atividades/cadastro-produtos.php">Ver projetos</a>
                 </div>
 
                 <!-- PROJETO 4 -->
@@ -178,9 +178,9 @@
                         04
                     </div>
 
-                    <h3>Dados . JSON</h3>
+                    <h3>HELPDESK</h3>
                     <p>
-                        Recebe informações e cadastra produto em JSON
+                        Recebe, visualiza, altera e encerra chamados de T.I
                     </p>
 
                     <div class="tecnologias">
@@ -188,7 +188,7 @@
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="cadastro-produtos.php">Ver projetos</a>
+                    <a href="atividades/helpdesk.php">Ver projetos</a>
                 </div>
 
                 <!-- PROJETO 5 -->
@@ -199,7 +199,7 @@
                         05
                     </div>
 
-                    <h3>ATIVIDADE (remover depois)</h3>
+                    <h3></h3>
                     <p>
                         ...
                     </p>
@@ -209,7 +209,7 @@
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="helpdesk.php">Ver projetos</a>
+                    <a href="">Ver projetos</a>
                 </div>
 
             </div>

@@ -1,6 +1,20 @@
 <?php
 
-$chamado = $_POST[""];
+$usuario = $_POST["usuario"];
+$setor = $_POST["setor"];
+$equipamento = $_POST["equipamento"];
+$descricao = $_POST["descricao"];
+$prioridade = $_POST["prioridade"];
+
+
+$NovoChamado = [
+    "usuario" => $usuario,
+    "setor" => $setor,
+    "equipamento" => $equipamento,
+    "descricao" => $descricao,
+    "prioridade" => $prioridade
+]
+
 
 ?>
 
@@ -21,6 +35,10 @@ $chamado = $_POST[""];
     </header>
     <h1>Bem vindo ao suporte de T.I !</h1>
     <p>Sistema para registrar chamados relacionados a área de T.I</p>
+
+    <label for=""></label>
+
+
 
 </body>
 

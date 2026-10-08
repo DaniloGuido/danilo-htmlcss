@@ -1,6 +1,6 @@
 <?php 
-    $nome = $_POST["nome"];
-    $idade = $_POST["idade"];
+    $nome = $_GET["nome"];
+    $idade = $_GET["idade"];
     $resultado = "";
 
     if($idade >= 18) {
@@ -16,7 +16,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verificador de idade</title>
-    <link rel="stylesheet" href="verificador.css">
+    <link rel="stylesheet" href="css/verificador.css">
 </head>
 <body>
     <!--MENU-->
@@ -28,7 +28,7 @@
     </div>
 
     <div class="mensagem">
-    <form method="POST">
+    <form method="GET">
         <label>Nome:</label>
         <input type="text" class="nome" id="nome" name="nome">
         <input type="numero" class="idade" id="idade" name="idade">
