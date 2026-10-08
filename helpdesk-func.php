@@ -10,6 +10,9 @@
     <title>SUPORTE - T . I</title>
 </head>
 <body>
+    <h1>Bem vindo ao suporte de T.I !</h1>
+    <p>Sistema para registrar chamados relacionados a área de T.I</p>
+    <p>PS. Lâmpada queimada não é área de T.I!</p>
     <header>
         <div>
             <a href="index.php">INÍCIO</a>
