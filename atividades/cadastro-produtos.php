@@ -62,7 +62,7 @@ $produtos = json_decode($conteudoJson, true);
             <h2>Danilo <span>Guido</span></h2>
         </div>
         <nav>
-            <a href="index.php">Início</a>
+            <a href="../index.php">Início</a>
         </nav>
     </header>
 

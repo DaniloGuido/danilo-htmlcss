@@ -26,7 +26,7 @@ if ($idade >= 18) {
         <h2>Verificação de idade</h2>
         <header>
             <nav>
-                <a href="index.php">Início</a>
+                <a href="../index.php">Início</a>
             </nav>
         </header>
     </div>
