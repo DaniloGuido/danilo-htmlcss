@@ -30,7 +30,7 @@ $NovoChamado = [
 <body>
     <header>
         <div>
-            <a href="index.php">INÍCIO</a>
+            <a href="../index.php">INÍCIO</a>
         </div>
     </header>
     <h1>Bem vindo ao suporte de T.I !</h1>
