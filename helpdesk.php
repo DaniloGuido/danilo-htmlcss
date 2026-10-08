@@ -2,6 +2,10 @@
 
     require_once "funcoes.php";
     
+    $chamado = "";
+
+    echo "Registre seu chamado.";
+
 ?>
 
 <!DOCTYPE html>
