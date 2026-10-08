@@ -23,7 +23,7 @@
     <div class="logo">
         <h2>Verificação de idade</h2>
     <nav>
-        <a href="atividades/index.php">Início</a>
+        <a href="index.php">Início</a>
     </nav>
     </div>
 
