@@ -53,7 +53,7 @@ $NovoChamado = [
     <textarea name="descricao" rows="5" cols="30"></textarea>
     <br><br>
 
-
+    <button type="submit">ENVIAR</button>
 
 </body>
 
