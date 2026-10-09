@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         "prioridade" => $prioridade,
     ];
 
-    $arquivo = __DIR__ . "/dados/helpdesk.json";
+    $arquivo = __DIR__ . "/../dados/helpdesk.json";
 
     $conteudoJson = file_get_contents($arquivo);
 
@@ -31,6 +31,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     );
 
     file_put_contents($arquivo, $JsonAtualizado);
+
+
+    $chamados = ler_chamados();
 }
 ?>
 
