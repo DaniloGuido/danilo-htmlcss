@@ -2,6 +2,7 @@
 
 require_once "atividades/helpdesk-func.php";
 
+
 $usuario = $_POST["usuario"];
 $setor = $_POST["setor"];
 $equipamento = $_POST["equipamento"];
