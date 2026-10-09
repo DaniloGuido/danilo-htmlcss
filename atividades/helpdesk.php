@@ -3,22 +3,34 @@
 require_once "helpdesk-func.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-$usuario = $_POST["usuario"];
-$setor = $_POST["setor"];
-$equipamento = $_POST["equipamento"];
-$descricao = $_POST["descricao"];
-$prioridade = $_POST["prioridade"];
+    $usuario = $_POST["usuario"];
+    $setor = $_POST["setor"];
+    $equipamento = $_POST["equipamento"];
+    $descricao = $_POST["descricao"];
+    $prioridade = $_POST["prioridade"];
 
-start();
+    $NovoChamado = [
+        "usuario" => $usuario,
+        "setor" => $setor,
+        "equipamento" => $equipamento,
+        "descricao" => $descricao,
+        "prioridade" => $prioridade,
+    ];
 
-$NovoChamado = [
-    "usuario" => $usuario,
-    "setor" => $setor,
-    "equipamento" => $equipamento,
-    "descricao" => $descricao,
-    "prioridade" => $prioridade,
-];
+    $arquivo = __DIR__ . "/dados/helpdesk.json";
 
+    $conteudoJson = file_get_contents($arquivo);
+
+    $chamados = json_decode($conteudoJson, true);
+
+    $chamados[] = $NovoChamado;
+
+    $JsonAtualizado = json_encode(
+        $chamados,
+        JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE
+    );
+
+    file_put_contents($arquivo, $JsonAtualizado);
 }
 ?>
 
