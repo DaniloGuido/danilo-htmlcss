@@ -2,7 +2,7 @@
 
 require_once "helpdesk-func.php";
 
-
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $usuario = $_POST["usuario"];
 $setor = $_POST["setor"];
 $equipamento = $_POST["equipamento"];
@@ -18,7 +18,7 @@ $NovoChamado = [
     "prioridade" => $prioridade
 ]
 
-
+}
 ?>
 
 <!DOCTYPE html>
