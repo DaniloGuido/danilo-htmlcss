@@ -60,6 +60,7 @@ $NovoChamado = [
         <option>Média</option>
         <option>Alta</option>
     </select>
+    <br><br>
 
     <button type="submit">ENVIAR</button>
     </form>
