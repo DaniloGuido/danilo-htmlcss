@@ -2,7 +2,7 @@
 
 function start()
 {
-    return "pola";
+    echo"pola";
 }
 
 

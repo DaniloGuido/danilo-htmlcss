@@ -9,7 +9,7 @@ $equipamento = $_POST["equipamento"];
 $descricao = $_POST["descricao"];
 $prioridade = $_POST["prioridade"];
 
-echo start();
+start();
 
 $NovoChamado = [
     "usuario" => $usuario,
@@ -40,7 +40,7 @@ $NovoChamado = [
     <h1>Bem vindo ao suporte de T.I !</h1>
     <p>Sistema para registrar chamados relacionados a área de T.I</p>
 
-    <form>
+    <form method="POST" action="">
         <label class="usuario">Usuário: </label>
         <input type="text" class="usuario_in" name="usuario">
         <br><br>
@@ -59,7 +59,7 @@ $NovoChamado = [
         <br><br>
 
         <label class="prioridade">Nível de prioridade: </label>
-        <select class="prioridade_in">
+        <select class="prioridade_in" name="prioridade">
             <option>Baixa</option>
             <option>Média</option>
             <option>Alta</option>
