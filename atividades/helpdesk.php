@@ -16,8 +16,8 @@ $NovoChamado = [
     "setor" => $setor,
     "equipamento" => $equipamento,
     "descricao" => $descricao,
-    "prioridade" => $prioridade
-]
+    "prioridade" => $prioridade,
+];
 
 }
 ?>
