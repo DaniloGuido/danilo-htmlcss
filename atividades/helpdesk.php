@@ -38,15 +38,19 @@ $NovoChamado = [
 
     <label class="usuario">Usuário: </label>
     <input type="text" class="usuario_in" name="usuario">
+    <br>
 
     <label class="setor">Setor: </label>
     <input type="text" class="setor_in" name="setor">
+    <br>
 
     <label class="equipamento">Equipamento: </label>
     <input type="text" class="equipamento_in" name="equipamento">
+    <br>
 
     <label class="descricao">Descreva o problema: </label>
     <textarea name="descricao" rows="5" cols="30">problema</textarea>
+    <br>
 
 
 
