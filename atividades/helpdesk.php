@@ -36,6 +36,7 @@ $NovoChamado = [
     <h1>Bem vindo ao suporte de T.I !</h1>
     <p>Sistema para registrar chamados relacionados a área de T.I</p>
 
+    <form>
     <label class="usuario">Usuário: </label>
     <input type="text" class="usuario_in" name="usuario">
     <br><br>
@@ -53,7 +54,15 @@ $NovoChamado = [
     <textarea name="descricao" rows="5" cols="30"></textarea>
     <br><br>
 
+    <label class="prioridade">Nível de prioridade: </label>
+    <select class="prioridade_in">
+        <option>Baixa</option>
+        <option>Média</option>
+        <option>Alta</option>
+    </select>
+
     <button type="submit">ENVIAR</button>
+    </form>
 
 </body>
 
