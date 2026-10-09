@@ -1,6 +1,6 @@
 <?php
 
-require_once "atividades/helpdesk-func.php";
+require_once "helpdesk-func.php";
 
 
 $usuario = $_POST["usuario"];
