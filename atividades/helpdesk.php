@@ -9,7 +9,7 @@ $equipamento = $_POST["equipamento"];
 $descricao = $_POST["descricao"];
 $prioridade = $_POST["prioridade"];
 
-saudacao();
+start();
 
 $NovoChamado = [
     "usuario" => $usuario,
