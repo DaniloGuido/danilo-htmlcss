@@ -62,6 +62,14 @@ $projetos = json_decode($conteudoJson, true);
                 <?= htmlspecialchars($projeto["status"]) ?>
             </p>
 
+            <form method="POST">
+                <label class="resposta">Resposta final: </label>
+                <select class="resposta_in" name="resposta">
+                    <option>APROVAR</option>
+                    <option>REPROVAR</option>
+                </select>
+            </form> 
+
             <hr>
 
         <?php } ?>
