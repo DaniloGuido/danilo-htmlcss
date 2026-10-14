@@ -89,6 +89,7 @@ $aba = isset($_GET["aba"]) ? $_GET["aba"] : "aguardando";
         <a href="software-house.php">Enviar projeto</a>
         <a href="equipe-ti.php">Área da equipe de T.I.</a>
         <a href="consultar-projeto.php">Consultar projeto</a>
+        <a href="../index.php">VOLTAR ÍNDEX</a>
     </nav>
 
     <h1>Projetos recebidos</h1>

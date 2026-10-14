@@ -50,6 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <a href="software-house.php">Enviar projeto</a>
         <a href="equipe-ti.php">Área da equipe de T.I.</a>
         <a href="consultar-projeto.php">Consultar projeto</a>
+        <a href="../index.php">VOLTAR ÍNDEX</a>
     </nav>
 
     <h1>Consulte seu projeto</h1>
