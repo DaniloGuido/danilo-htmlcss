@@ -52,9 +52,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enviar Projeto</title>
+
+    <!-- --------- CSS ------------ -->
+
+    <style>
+
+        <!-- VISUAL DA BARRA DE NAVEGAÇÃO-->
+        nav {
+            background-color: #222;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        nav a:hover {
+            color: #8b5cf6;
+        }
+    </style>
+
 </head>
 
 <body>
+
+        <!-- Barra de navegação -->
+    <nav>
+        <a href="software-house.php">Enviar projeto</a>
+        <a href="equipe-ti.php">Área da equipe de T.I.</a>
+    </nav>
 
     <h1>Envie sua ideia de projeto</h1>
 
