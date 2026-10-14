@@ -162,7 +162,6 @@ $aba = isset($_GET["aba"]) ? $_GET["aba"] : "aguardando";
                 <p>
                     <strong>Orçamento:</strong>
                     R$ 
-                    // Verifica se existe um orçamento salvo no projeto
                     <?= isset($projeto["orcamento"])
 
                         // converte o valor para número decimal
