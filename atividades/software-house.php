@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Lê os projetos que já estão salvos no arquivo JSON
     $conteudoJson = file_get_contents(
-        __DIR__ . "/dados/projetos.json"
+       dirname(__DIR__) . "/dados/projetos.json"
     );
 
     // Transforma o conteúdo JSON em um array PHP
@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Salva os projetos atualizados no arquivo JSON
     file_put_contents(
-        __DIR__ . "/dados/projetos.json",
+        dirname(__DIR__) . "/dados/projetos.json",
         $jsonAtualizado
     );
 
