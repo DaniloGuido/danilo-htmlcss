@@ -14,6 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Identifica o projeto e recebe a resposta
     $indice = (int) $_POST["indice"];
     $resposta = $_POST["resposta"];
+    $orcamento = $_POST["orcamento"];
 
     // Verifica se o projeto existe e se a resposta é válida
     if (
@@ -24,6 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Salva a resposta e atualiza o status
         $projetos[$indice]["resposta"] = $resposta;
         $projetos[$indice]["status"] = "Respondido";
+        $projetos[$indice]["orcamento"] = $orcamento;
 
         // Atualiza o arquivo JSON
         $jsonAtualizado = json_encode(
@@ -174,6 +176,9 @@ $aba = isset($_GET["aba"]) ? $_GET["aba"] : "aguardando";
                     </select>
 
                     <br><br>
+
+                    <label>Orçamento do projeto (R$):</label>
+                    <input type="number" name="orcamento" min="0" step="0.01" required>
 
                     <button type="submit">Enviar resposta</button>
 
