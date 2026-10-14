@@ -68,6 +68,9 @@ $projetos = json_decode($conteudoJson, true);
                     <option>APROVAR</option>
                     <option>REPROVAR</option>
                 </select>
+                <br><br>
+
+                <button type="submit">Enviar resposta</button>
             </form> 
 
             <hr>
