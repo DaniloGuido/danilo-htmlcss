@@ -212,6 +212,27 @@
                     <a href="">Ver projetos</a>
                 </div>
 
+                <!-- PROJETO SOFTWARE HOUSE -->
+
+                <div class="card">
+
+                    <div class="numero-projeto">
+                        06
+                    </div>
+
+                    <h3>SOFTWARE HOUSE</h3>
+                    <p>
+                        Desenvolvemos soluções personalizadas para atender às necessidades do seu negócio
+                    </p>
+
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                    </div>
+                    <a href="atividades/software-house.php">Ver projetos</a>
+                </div>
+
             </div>
 
         </section>
