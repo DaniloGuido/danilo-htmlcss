@@ -159,6 +159,23 @@ $aba = isset($_GET["aba"]) ? $_GET["aba"] : "aguardando";
                     <?= htmlspecialchars($projeto["resposta"]) ?>
                 </p>
 
+                <p>
+                    <strong>Orçamento:</strong>
+                    R$ 
+                    // Verifica se existe um orçamento salvo no projeto
+                    <?= isset($projeto["orcamento"])
+
+                        // converte o valor para número decimal
+                        ? number_format((float)$projeto["orcamento"],   // printa valor do orçamento
+                        2,   // define o número de casas decimais
+                        ',', // define o separador decimal
+                        '.'  // define o separador de milhar
+                        )
+
+                        // caso não tenha orçamento, exibe a mensagem
+                        : "Não informado" ?>
+                </p>
+
             <?php } else { ?>
 
                 <!-- Formulário para responder ao projeto -->
