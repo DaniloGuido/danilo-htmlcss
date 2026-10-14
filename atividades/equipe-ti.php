@@ -1,12 +1,50 @@
+
 <?php
 
-// Lê os projetos salvos no arquivo JSON
-$conteudoJson = file_get_contents(
-    dirname(__DIR__) . "/dados/projetos.json"
-);
+// Caminho do arquivo JSON
+$caminhoJson = dirname(__DIR__) . "/dados/projetos.json";
 
-// Transforma o JSON em um array PHP
+// Verifica se a equipe enviou uma resposta
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    // Lê os projetos salvos
+    $conteudoJson = file_get_contents($caminhoJson);
+    $projetos = json_decode($conteudoJson, true);
+
+    // Identifica o projeto e recebe a resposta
+    $indice = (int) $_POST["indice"];
+    $resposta = $_POST["resposta"];
+
+    // Verifica se o projeto existe e se a resposta é válida
+    if (
+        isset($projetos[$indice]) &&
+        ($resposta == "APROVAR" || $resposta == "REPROVAR")
+    ) {
+
+        // Salva a resposta e atualiza o status
+        $projetos[$indice]["resposta"] = $resposta;
+        $projetos[$indice]["status"] = "Respondido";
+
+        // Atualiza o arquivo JSON
+        $jsonAtualizado = json_encode(
+            $projetos,
+            JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE
+        );
+
+        file_put_contents($caminhoJson, $jsonAtualizado);
+    }
+
+    // Volta para a aba de projetos respondidos
+    header("Location: equipe-ti.php?aba=respondidos");
+    exit;
+}
+
+// Lê novamente os projetos para exibi-los na página
+$conteudoJson = file_get_contents($caminhoJson);
 $projetos = json_decode($conteudoJson, true);
+
+// Define qual aba será exibida
+$aba = isset($_GET["aba"]) ? $_GET["aba"] : "aguardando";
 
 ?>
 
@@ -15,7 +53,31 @@ $projetos = json_decode($conteudoJson, true);
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Área da equipe de T.I.</title>
+
+    <style>
+        nav {
+            margin-bottom: 25px;
+        }
+
+        nav a {
+            margin-right: 15px;
+        }
+
+        .aba {
+            display: inline-block;
+            padding: 10px;
+            background-color: #ddd;
+            color: black;
+            text-decoration: none;
+        }
+
+        .ativa {
+            background-color: #333;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
@@ -28,15 +90,40 @@ $projetos = json_decode($conteudoJson, true);
 
     <h1>Projetos recebidos</h1>
 
-    <!-- Verifica se existem projetos cadastrados -->
-    <?php if (empty($projetos)) { ?>
+    <!-- Abas para organizar os projetos -->
+    <div>
+        <a class="aba <?= $aba == 'aguardando' ? 'ativa' : '' ?>"
+           href="equipe-ti.php?aba=aguardando">
+            Aguardando avaliação
+        </a>
 
-        <p>Nenhum projeto foi enviado ainda.</p>
+        <a class="aba <?= $aba == 'respondidos' ? 'ativa' : '' ?>"
+           href="equipe-ti.php?aba=respondidos">
+            Projetos respondidos
+        </a>
+    </div>
 
-    <?php } else { ?>
+    <hr>
 
-        <!-- Percorre todos os projetos salvos no JSON -->
-        <?php foreach ($projetos as $projeto) { ?>
+    <?php
+
+    // Controla se algum projeto foi encontrado na aba
+    $encontrou = false;
+
+    // Percorre todos os projetos cadastrados
+    foreach ($projetos as $indice => $projeto) {
+
+        // Verifica se o projeto já recebeu uma resposta
+        $temResposta = isset($projeto["resposta"]);
+
+        // Mostra apenas os projetos da aba selecionada
+        if (
+            ($aba == "respondidos" && $temResposta) ||
+            ($aba != "respondidos" && !$temResposta)
+        ) {
+
+            $encontrou = true;
+    ?>
 
             <h2>
                 <?= htmlspecialchars($projeto["nome_projeto"]) ?>
@@ -62,20 +149,49 @@ $projetos = json_decode($conteudoJson, true);
                 <?= htmlspecialchars($projeto["status"]) ?>
             </p>
 
-            <form method="POST">
-                <label class="resposta">Resposta final: </label>
-                <select class="resposta_in" name="resposta">
-                    <option>APROVAR</option>
-                    <option>REPROVAR</option>
-                </select>
-                <br><br>
+            <?php if ($temResposta) { ?>
 
-                <button type="submit">Enviar resposta</button>
-            </form> 
+                <!-- Mostra a resposta já enviada -->
+                <p>
+                    <strong>Resposta da equipe:</strong>
+                    <?= htmlspecialchars($projeto["resposta"]) ?>
+                </p>
+
+            <?php } else { ?>
+
+                <!-- Formulário para responder ao projeto -->
+                <form method="POST">
+
+                    <!-- Identifica qual projeto receberá a resposta -->
+                    <input type="hidden" name="indice"
+                           value="<?= $indice ?>">
+
+                    <label>Resposta final:</label>
+
+                    <select name="resposta">
+                        <option value="APROVAR">APROVAR</option>
+                        <option value="REPROVAR">REPROVAR</option>
+                    </select>
+
+                    <br><br>
+
+                    <button type="submit">Enviar resposta</button>
+
+                </form>
+
+            <?php } ?>
 
             <hr>
 
-        <?php } ?>
+    <?php
+        }
+    }
+
+    // Mostra uma mensagem caso a aba esteja vazia
+    if (!$encontrou) {
+    ?>
+
+        <p>Nenhum projeto nesta aba.</p>
 
     <?php } ?>
 
