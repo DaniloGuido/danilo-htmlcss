@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         nav a {
-            color: black;
+            color: #10006d;
             text-decoration: none;
             margin-right: 20px;
         }
