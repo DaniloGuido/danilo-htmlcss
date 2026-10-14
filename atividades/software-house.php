@@ -64,13 +64,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         nav a {
-            color: white;
+            color: black;
             text-decoration: none;
             margin-right: 20px;
         }
 
         nav a:hover {
-            color: #8b5cf6;
+            color: #1d00c4;
         }
     </style>
 
