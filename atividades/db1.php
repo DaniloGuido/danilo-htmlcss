@@ -1,6 +1,9 @@
 <?php 
     require_once "conexao.php";
 
+
+    // ~~~~~~~~~ CRIAR TABELA
+
     $sql = "CREATE TABLE IF NOT EXISTS produtos (
         id INT AUTO_INCREMENT PRIMARY KEY,
         nome VARCHAR(100) NOT NULL,
@@ -10,13 +13,76 @@
     $pdo->exec($sql);
 
 
-    if (isset($_POST["cadastrar"])) {
-        $nome = 'nome';
-        $preco = 'preco';
-        $quantidade = 'quantidade';
+    // ~~~~~~~~~ INSERIR
 
-        $sql - "INSERT INTO produtos ";
+    if (isset($_POST["cadastrar"])) {
+        $nome = $_POST["nome"];
+        $preco = $_POST["preco"];
+        $quantidade = $_POST["quantidade"];
+
+        $sql - "INSERT INTO produtos (nome, preco, quantidade) VALUES ('$nome' , $preco , $quantidade)";
+
+        $stmt = $pdo->prepare($sql);
+
+        $stmt-> execute([
+            "nome" => $nome,
+            "preco" => $preco,
+            "quantidade" => $quantidade
+        ]);
     }
+
+
+    // ~~~~~~~~~ ATUALIZAR
+
+        if (isset($_POST["atualizar"])) {
+            $id =  $_POST["id"];
+            $nome = $_POST["nome"];
+            $preco = $_POST["preco"];
+            $quantidade = $_POST["quantidade"];
+
+            $sql ="UPDATE produtos SET nome = '$nome', preco = $preco, quantidade = $quantidade 
+            WHERE id = $id";
+
+            $stmt = $pdo->prepare($sql);
+
+            $stmt-> execute([
+                "nome" => $nome,
+                "preco" => $preco,
+                "quantidade" => $quantidade,
+                "id" => $id
+            ]);
+
+        }
+
+    // ~~~~~~~~~ DELETAR
+
+        if (isset($_POST["excluir"])) {
+                $id = $_POST["id"];
+
+                $sql = "DELETE FROM produtos WHERE id = $id";
+
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute([
+                    "id" => $id
+                ]);
+        }
+
+        $produtoEditar = null;
+
+        if (isset($_GET["editar"])) {
+            $id = $_GET["editar"];
+            $sql = "SELECT * FROM produtos WHERE id = $id";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute(["id" => $id]);
+            $produtoEditar = $stmt->fetch(PDO::FETCH_ASSOC);
+        }
+
+
+    // ~~~~~~~~~ LISTAR TODOS OS PRODUTOS
+
+        $sql = "SELECT * FROM produtos ORDER BY id ASC";
+        $stmt = $pdo->query($sql);
+        $produtos = $stmt->fetchALL(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
