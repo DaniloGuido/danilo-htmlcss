@@ -233,6 +233,27 @@
                     <a href="atividades/software-house.php">Ver projetos</a>
                 </div>
 
+                <div class="card">
+
+                    <div class="numero-projeto">
+                        07
+                    </div>
+
+                    <h3>PRODUTOS</h3>
+                    <p>
+                        Introdução a banco de dados, funções de 
+                        criar tabela, inserir valores, atualizar,
+                        excluir e mostrar.
+                    </p>
+
+                    <div class="tecnologias">
+                        <span>PHP</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                    </div>
+                    <a href="atividades/db1.php">Ver projetos</a>
+                </div>
+
             </div>
 
         </section>
