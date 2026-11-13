@@ -10,7 +10,7 @@
 $host = 'localhost' ;
     // - host é onde roda
 
-$db = 'danilo755' ;
+$db = 'danilo755_db1' ;
     // - banco de dados dentro do mysql
 
 $user = 'danilo755' ;
