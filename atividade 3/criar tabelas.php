@@ -1,6 +1,6 @@
 <?php 
 
-require_once "../atividades/conexao.php" ; 
+require_once "conexao2.php" ; 
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~ Tabela Categorias 
@@ -8,7 +8,6 @@ require_once "../atividades/conexao.php" ;
 $sql = "CREATE TABLE IF NOT EXISTS categorias (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL ) " ;
-
 
 $pdo->exec($sql);
 
@@ -26,7 +25,6 @@ $sql = "CREATE TABLE IF NOT EXISTS produtos (
     FOREIGN KEY (categoria_id)
         REFERENCES categorias(id) ) " ;
 
-
 $pdo->exec($sql);
 
 
@@ -41,7 +39,6 @@ $sql = "CREATE TABLE IF NOT EXISTS vendas (
     
     FOREIGN KEY (produto_id)
         REFERENCES produtos(id) ) " ;
-
 
 $pdo->exec($sql);
 
