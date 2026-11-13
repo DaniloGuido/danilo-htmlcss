@@ -1,6 +1,6 @@
 <?php 
 
-require_once "conexao2.php" ; 
+require_once "../conexao.php" ; 
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~ Tabela Categorias 
@@ -44,10 +44,34 @@ $pdo->exec($sql);
 
 
 
+$sql = "INSERT INTO categorias (nome) VALUES 
+    ('Computadores'),
+    ('Periféricos'),
+    ('Armazenamento'),
+    ('Componentes'),
+    ('Monitor') " ;
+
+$stmt = $pdo->prepare($sql);
+
+    $stmt->execute();
+
+
+$sql = "INSERT INTO produtos (nome, categoria_id, preco, quantidade, estoque_minimo)
+        VALUES 
+        ('Notebook Dell', 1, 3500.00, 10, 3),
+        ('Computador Gamer', 1, 5500.00, 5, 2),
+        ('Teclado Mecânico', 2, 150.00, 20, 5),
+        ('Mouse Gamer', 2, 90.00, 15, 5),
+        ('Monitor LG 24', 2, 850.00, 8, 2),
+        ('SSD 480GB', 3, 250.00, 12, 3),
+        ('HD 1TB', 3, 300.00, 10, 3),
+        ('Memória RAM 8GB', 4, 180.00, 2, 5),
+        ('Placa de Vídeo RTX', 4, 2800.00, 4, 2),
+        ('Webcam Full HD', 5, 120.00, 0, 3);"
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

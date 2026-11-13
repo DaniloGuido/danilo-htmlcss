@@ -254,6 +254,25 @@
                     <a href="atividades/db1.php">Ver projetos</a>
                 </div>
 
+                <div class="card">
+
+                    <div class="numero-projeto">
+                        08
+                    </div>
+
+                    <h3>Atividade info tech store</h3>
+                    <p>
+                        
+                    </p>
+
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                    </div>
+                    <a href="atividade 3/banco.php">Ver projetos</a>
+                </div>
+
             </div>
 
         </section>
