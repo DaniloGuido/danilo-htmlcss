@@ -67,17 +67,23 @@ $sql = "INSERT INTO produtos (nome, categoria_id, preco, quantidade, estoque_min
         ('HD 1TB', 3, 300.00, 10, 3),
         ('Memória RAM 8GB', 4, 180.00, 2, 5),
         ('Placa de Vídeo RTX', 4, 2800.00, 4, 2),
-        ('Webcam Full HD', 5, 120.00, 0, 3);"
+        ('Webcam Full HD', 5, 120.00, 0, 3);" ;
+
+
+
+
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+    <H1>INFO TECH STORE</H1>
+
     
 </body>
 </html>
